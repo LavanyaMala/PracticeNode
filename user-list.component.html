@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12 mt-4">
+        <div class="alert alert-primary">
+            <span class="custom-user-heading"> All Users</span>
+          </div>
+       </div>
+    </div>
+    <div class="row" > 
+        <div class="col-sm-4 mt-4 custom-user-column" *ngFor="let user of users">    
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{user.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Company: {{user.company.name}}</h6>
+                  <p class="card-text">
+                    Email: {{user.email}} <br />
+                    City: {{user.address.city}} <br />
+                    Web: {{user.website}}
+                  </p>
+                  <a href="#" class="card-link">Delete User</a>
+                  <a href="#" class="card-link">Edit User Info</a>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+ </div>
